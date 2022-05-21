@@ -1,7 +1,8 @@
 import React from "react"
 import Header from '../components/Header'
 import Trending from "../components/Trending"
-/* import CmcTable from  "../components/cmc-table/CmcTable" */
+import CMCTable from "../components/cmc-table/CMCTable"
+
 
 
 
@@ -10,7 +11,7 @@ const Home = () => {
     <div className="min-h-screen bg-[#17171a]">
       <Header />
       <Trending/>
-     {/*  <CmcTable/> */}
+       <CMCTable/> 
     </div>
   )
 }
