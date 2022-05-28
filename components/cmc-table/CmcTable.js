@@ -2,7 +2,6 @@ import { useContext, useEffect, useState, useCallback } from 'react'
 import btc from '../../assets/btc.png'
 import { CoinMarketContext } from '../../context/context'
 
-
 const CMCtable = () => {
   let { getTopTenCoins } = useContext(CoinMarketContext)
   let [coinData, setCoinData] = useState(null)
@@ -14,14 +13,14 @@ const CMCtable = () => {
   const setData = useCallback(async () => {
     try {
       let apiResponse = await getTopTenCoins()
-      console.log(apiResponse)
+
       let filteredResponse = []
 
       for (let i = 0; i < apiResponse.length; i++) {
         const element = apiResponse[i]
         if (element.cmc_rank <= 10) filteredResponse.push(element)
       }
-
+      console.log(filteredResponse)
       setCoinData(filteredResponse)
     } catch (e) {
       console.log(e.message)
@@ -29,12 +28,12 @@ const CMCtable = () => {
   }, [getTopTenCoins])
 
   return (
-    <div className='text-white font-bold'>
-      <div className='mx-auto max-w-screen-2xl'>
-        <table className='w-full'>
-         {/*  <CMCtableHeader /> */}
+    <div className="text-white font-bold">
+      <div className="mx-auto max-w-screen-2xl">
+        <table className="w-full">
+          {/*  <CMCtableHeader /> */}
 
-       {/*    {coinData && coinData ? (
+          {/*    {coinData && coinData ? (
             coinData.map((coin, index) => {
               return (
                  <CMCtableRow

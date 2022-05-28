@@ -1,5 +1,5 @@
 import MoreButton from './MoreButton'
-import TrendingCardRow from './trendingCardRow'
+import TrendingCardRow from './TrendingCardRow'
 import Image from 'next/image'
 
 const styles = {
