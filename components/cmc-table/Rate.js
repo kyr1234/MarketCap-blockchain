@@ -1,4 +1,3 @@
-import React from "react"
 import ChevronDown from "../../assets/svg/chevronDown"
 import ChevronUp from "../../assets/svg/chevronUp"
 

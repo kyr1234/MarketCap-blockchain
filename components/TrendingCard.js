@@ -1,5 +1,5 @@
-import MoreButton from './MoreButton'
-import TrendingCardRow from './TrendingCardRow'
+import MoreButton from './moreButton'
+import TrendingCardRow from './trendingCardRow'
 import Image from 'next/image'
 
 const styles = {
@@ -32,7 +32,7 @@ const TrendingCard = ({ icon, title, trendingData }) => {
             rate={item.rate}
           />
         )
-      })} 
+      })}
     </div>
   )
 }
